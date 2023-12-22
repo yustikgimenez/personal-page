@@ -1,0 +1,23 @@
+import React from 'react'
+import Item from './Item'
+
+const TrabajosList = ( {trabajos} ) => {
+  return (
+    <div className='container'>
+        <div className='grid grid-cols-3 gap-10'> 
+            { 
+                trabajos.length > 0 &&
+                trabajos.map((trabajo) => {
+                return (
+                    <div>
+                        <Item key={ trabajo.id } trabajo={trabajo} />
+                    </div>
+                )
+                })    
+            }
+        </div>
+    </div>
+  )
+}
+
+export default TrabajosList

@@ -1,27 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+    scroll-behavior: smooth;
+    @apply selection:bg-emerald-400;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    min-height: 2000px;
+    letter-spacing: 1px;
+}
+
+.bg-primary {
+    @apply bg-gray-800;
+}
+
+.bg-secondary {
+    @apply  bg-green-300;
+}
+
+section {
+    padding: 140px 0;    
+}
+
+.sectionPill {
+    @apply bg-green-300 inline-block px-3 py-1 mb-6 font-medium;
+}
+
+.sectionTitle {
+    @apply text-4xl xl:text-5xl text-gray-900 font-semibold uppercase;
 }
