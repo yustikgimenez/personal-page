@@ -13,7 +13,12 @@ const firebaseConfig = {
   measurementId: "G-3YDVF3CS5Y"
 };
 
-// Initialize Firebase
+// Inicializar Firebase solo si estamos en el entorno del navegador
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+let analytics;
+
+if (typeof window !== "undefined") {
+  analytics = getAnalytics(app);
+}
+
 export const db = getFirestore(app);

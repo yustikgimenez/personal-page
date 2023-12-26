@@ -15,9 +15,24 @@ const social = [
     },
 ]
 
+const data = [
+    {
+        title: 'Hablemos:',
+        icon: <BiLogoWhatsapp size={34} className='mr-3' />,
+        text: '1121550489',
+        url: 'https://wa.me/5491121550489?text=Hola,%20quisiera%20solicitar%20un%20presupuesto',
+    },
+    {
+        title: 'Escribime:',
+        icon: <BiEnvelope size={34} className='mr-3' />,
+        text: 'yustikdeivis.g@gmail.com',
+        url: 'mailto:yustikdeivis.g@gmail.com',
+    },
+]
+
 const Contact = () => {
   return (
-    <section id='contact' className='bg-secondary h-auto'>
+    <section id='contact' className='bg-secondary h-auto dark:bg-gray-700 dark:text-white'>
         <div className='container'>
             <div className='grid xl:grid-cols-2 gap-64'>
                 <div>
@@ -27,23 +42,20 @@ const Contact = () => {
                         Comparta tanta información como sea posible para que podamos 
                         aprovechar al máximo nuestra primera conversación.
                     </p>
-                    <div className='text-gray-800 mb-10'>
-                        <span className='block text-sm font-medium mb-2 text-gray-600'>Hablemos:</span>
-                        <Link href='https://wa.me/5491121550489?text=Hola,%20quisiera%20solicitar%20un%20presupuesto' target='_blank' className='font-semibold flex items-center text-sm xl:text-lg'>
-                            <BiLogoWhatsapp size={34} className='mr-3' /> 1121550489
-                        </Link>
-                    </div>
-                    <div className='text-gray-800 mb-16'>
-                        <span className='block text-sm font-medium mb-2 text-gray-600'>Escribime:</span>
-                        <Link href='mailto:yustikdeivis.g@gmail.com' className='font-semibold flex items-center text-sm xl:text-lg'>
-                            <BiEnvelope size={34} className='mr-3' /> yustikdeivis.g@gmail.com
-                        </Link>
-                    </div> 
-
+                    {data.map((data, idx) => (
+                        <div key={idx} className='text-gray-800 mb-10 dark:text-white'>
+                            <span className='block text-sm font-medium mb-2 text-gray-600 dark:text-white'>{data.title}</span>
+                            <Link href={data.url} target='_blank' className='font-semibold flex items-center text-sm xl:text-lg dark:hover:text-green-400 underline'>
+                                {data.icon} {data.text}
+                            </Link>
+                        </div>
+                    ))}
+                    
+                  
 
                     <ul className='flex flex-wrap text-3xl items-center gap-3'>
                         {social.map((social, idxSocial)  => (
-                            <li className='bg-gray-800 p-3 rounded-sm text-white hover:bg-white hover:text-black transition-all duration-300' key={idxSocial}>
+                            <li className='bg-gray-800 p-3 rounded-sm text-white hover:bg-white hover:text-black transition-all duration-300 dark:bg-green-400 dark:hover:bg-black dark:hover:text-white' key={idxSocial}>
                                 <Link href={social.link} target='_blank'>
                                     {social.icon}
                                 </Link>

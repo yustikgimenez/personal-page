@@ -12,7 +12,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Yustik Gimenez',
-  description: 'programador, programadora, desarrollador web, desarrolladora web, hacer pagina web, pagina web, landing page, diseño web, diseñadora web, empleada programadora, empleado programador, mundo tech, mundo it, programacion, web developr, frontend developer, freelance, freelancer developer',
+  description: 'programador, programadora, desarrollador web, desarrolladora web, hacer pagina web, pagina web, landing page, diseño web, diseñadora web, empleada programadora, empleado programador, mundo tech, mundo it, programacion, web developr, frontend developer, freelance, freelancer developer',  
 }
 
 export default function RootLayout({

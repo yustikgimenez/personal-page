@@ -4,8 +4,8 @@ import { HeadSectionProps } from '../../../types'
 const HeadSection = ({ pillName, sectionName, customStyles }:HeadSectionProps) => {
   return (
     <div className={`text-center mb-24 ${customStyles}`}>
-        <div className='sectionPill'>{pillName}</div>
-        <div className='sectionTitle'>{sectionName}</div>
+        <div className='sectionPill dark:bg-black dark:text-white'>{pillName}</div>
+        <div className='sectionTitle dark:text-white'>{sectionName}</div>
     </div>
   )
 }

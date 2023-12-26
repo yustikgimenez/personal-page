@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from 'react'
+import data from '../../data/trabajos.json'
 import TrabajosList from './TrabajosList'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../firesebase/config' 
 
 interface Trabajo {
-  id: string; 
+  id: string;
+  // other properties of a trabajo
 }
 
 const TrabajosContainer = () => {
 
-  const [trabajos, setTrabajos] = useState<Trabajo[]>([]);
+  const [trabajos, setTrabajos] = useState([]);
+
+    const traerTrabajos = () => {
+        return new Promise((resolve, reject) => {
+            resolve(data)
+        })
+    }
 
     useEffect(() => {
 

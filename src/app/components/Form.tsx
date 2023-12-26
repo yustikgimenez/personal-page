@@ -4,7 +4,7 @@ import HeadSection from './HeadSection';
 
 const Form = () => {
 
-    const form = useRef();
+  const form = useRef();
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -114,7 +114,8 @@ const Form = () => {
                 className='bg-black text-white 
                 py-5 px-10 hover:bg-white hover:text-black 
                 border border-black font-semibold
-                transition-all duration-300'
+                transition-all duration-300
+                dark:bg-green-400 dark:text-white dark:hover:bg-black dark:border-green-400 dark:hover:border-black'
                 disabled={isSubmitting}
             />
         </form>
