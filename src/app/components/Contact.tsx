@@ -15,7 +15,7 @@ const social = [
     },
 ]
 
-const data = [
+const infoContact = [
     {
         title: 'Hablemos:',
         icon: <BiLogoWhatsapp size={34} className='mr-3' />,
@@ -37,12 +37,14 @@ const Contact = () => {
             <div className='grid xl:grid-cols-2 gap-64'>
                 <div>
                     <HeadSection sectionName='Estemos en contacto' customStyles='text-start mb-16' />
+
                     <p className='leading-10 mb-36'>
                         Disfruto discutiendo nuevos proyectos y desafíos de diseño. 
                         Comparta tanta información como sea posible para que podamos 
                         aprovechar al máximo nuestra primera conversación.
                     </p>
-                    {data.map((data, idx) => (
+
+                    {infoContact.map((data, idx) => (
                         <div key={idx} className='text-gray-800 mb-10 dark:text-white'>
                             <span className='block text-sm font-medium mb-2 text-gray-600 dark:text-white'>{data.title}</span>
                             <Link href={data.url} target='_blank' className='font-semibold flex items-center text-sm xl:text-lg dark:hover:text-green-400 underline'>
@@ -50,8 +52,6 @@ const Contact = () => {
                             </Link>
                         </div>
                     ))}
-                    
-                  
 
                     <ul className='flex flex-wrap text-3xl items-center gap-3'>
                         {social.map((social, idxSocial)  => (
@@ -64,9 +64,9 @@ const Contact = () => {
                     </ul>     
 
                 </div>
-                <div>
-                    <Form />
-                </div>
+                
+                <Form />
+                
             </div>
         </div>
 

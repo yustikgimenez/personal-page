@@ -1,8 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { GrClose } from 'react-icons/gr';
-import { BiChevronRight } from 'react-icons/bi';
-import { BiMenu  } from "react-icons/bi";
+import { BiChevronRight, BiMenu } from 'react-icons/bi';
 
 const navigationMenu = [  
     {
