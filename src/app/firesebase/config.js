@@ -1,16 +1,16 @@
+import 'dotenv/config';
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
 import { getAnalytics } from "firebase/analytics";
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyClRjLCP6pqrfhmm2wtJGuB4zpVeMg1GsQ",
-  authDomain: "web-personal-23d6d.firebaseapp.com",
-  projectId: "web-personal-23d6d",
-  storageBucket: "web-personal-23d6d.appspot.com",
-  messagingSenderId: "869750999066",
-  appId: "1:869750999066:web:3cb6d434d56caf9da629a3",
-  measurementId: "G-3YDVF3CS5Y"
+  apiKey: String(process.env.NEXT_PUBLIC_apiKey),
+  authDomain: String(process.env.NEXT_PUBLIC_authDomain),
+  projectId: String(process.env.NEXT_PUBLIC_projectId),
+  storageBucket: String(process.env.NEXT_PUBLIC_storageBucket),
+  messagingSenderId: String(process.env.NEXT_PUBLIC_messagingSenderId),
+  appId: String(process.env.NEXT_PUBLIC_appId),
+  measurementId: String(process.env.NEXT_PUBLIC_measurementId),
 };
 
 // Inicializar Firebase solo si estamos en el entorno del navegador
