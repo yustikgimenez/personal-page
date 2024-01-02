@@ -9,8 +9,8 @@ const TrabajosList = ( {trabajos} ) => {
                 trabajos.length > 0 &&
                 trabajos.map((trabajo) => {
                 return (
-                    <div>
-                        <Item key={ trabajo.id } trabajo={trabajo} />
+                    <div key={trabajo.id}>
+                        <Item trabajo={trabajo} />
                     </div>
                 )
                 })    
