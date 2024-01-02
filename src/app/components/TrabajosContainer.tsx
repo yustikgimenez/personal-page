@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import data from '../../data/trabajos.json'
 import TrabajosList from './TrabajosList'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../firesebase/config' 
