@@ -1,7 +1,15 @@
 import Image from 'next/image'
 import { BiLinkExternal } from "react-icons/bi";
 
-export const ItemTrabajo = ( {trabajo} ) => {
+interface Trabajo {
+  title: string;
+  desc: string;
+  image: string;
+  url: string;
+}
+
+
+export const ItemTrabajo = ({ trabajo }: { trabajo: Trabajo }) => {
   return (
     
         <figure className="bg-slate-100 rounded-sm p-8 dark:bg-gray-700 dark:text-white">          
