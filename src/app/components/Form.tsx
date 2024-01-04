@@ -33,7 +33,7 @@ const Form = () => {
       // Ocultar la alerta de éxito después de unos segundos
       setTimeout(() => {
         setShowSuccess(false);
-      }, 3000);
+      }, 4000);
     } catch (error) {
       console.error(error.text);
 
@@ -43,7 +43,7 @@ const Form = () => {
       // Ocultar la alerta de error después de unos segundos
       setTimeout(() => {
         setShowError(false);
-      }, 3000);
+      }, 4000);
     } finally {
       // Deshabilitar el estado de envío
       setIsSubmitting(false);
