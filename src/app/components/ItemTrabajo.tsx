@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { BiLinkExternal } from "react-icons/bi";
 
-export const Item = ( {trabajo} ) => {
+export const ItemTrabajo = ( {trabajo} ) => {
   return (
     
         <figure className="bg-slate-100 rounded-sm p-8 dark:bg-gray-700 dark:text-white">          
@@ -28,8 +28,8 @@ export const Item = ( {trabajo} ) => {
                     target='_blank' 
                     rel='noopener noreferrer'
                     className='bg-primary text-white 
-                    p-4 inline-flex items-center
-                    rounded-sm
+                    p-4 px-8 inline-flex items-center
+                    rounded-md
                     hover:bg-green-500 hover:text-white dark:bg-green-400 dark:text-black dark:hover:bg-white'>
                     <span className='mr-3'>ir al sitio</span> <BiLinkExternal size={24} />
                   </a>    
@@ -40,4 +40,4 @@ export const Item = ( {trabajo} ) => {
   )
 }
 
-export default Item
+export default ItemTrabajo

@@ -1,5 +1,5 @@
 import React from 'react'
-import Item from './Item'
+import ItemTrabajo from './ItemTrabajo'
 
 const TrabajosList = ( {trabajos} ) => {
   return (
@@ -10,7 +10,7 @@ const TrabajosList = ( {trabajos} ) => {
                 trabajos.map((trabajo) => {
                 return (
                     <div key={trabajo.id}>
-                        <Item trabajo={trabajo} />
+                        <ItemTrabajo trabajo={trabajo} />
                     </div>
                 )
                 })    
