@@ -3,49 +3,39 @@ import emailjs from '@emailjs/browser';
 import HeadSection from './HeadSection';
 
 const Form = () => {
-
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const sendEmail = async (e) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Evitar envío múltiple mientras se está procesando
-    if (isSubmitting) {
+    if (!form.current) {
+      console.error('El ref del formulario no está asignado correctamente');
       return;
     }
 
-    // Habilitar el estado de envío
     setIsSubmitting(true);
 
     try {
       const result = await emailjs.sendForm('service_bsz9jxv', 'template_ncnagdc', form.current, 'e22SDw57K0tigxZfp');
       console.log(result.text);
 
-      // Limpiar los campos del formulario
       form.current.reset();
 
-      // Mostrar la alerta de éxito
       setShowSuccess(true);
-
-      // Ocultar la alerta de éxito después de unos segundos
       setTimeout(() => {
         setShowSuccess(false);
       }, 4000);
-    } catch (error) {
-      console.error(error.text);
+    } catch (error: any) {
+      console.error(error.text); // Tratando 'error' como de tipo 'any'
 
-      // Mostrar la alerta de error
       setShowError(true);
-
-      // Ocultar la alerta de error después de unos segundos
       setTimeout(() => {
         setShowError(false);
       }, 4000);
     } finally {
-      // Deshabilitar el estado de envío
       setIsSubmitting(false);
     }
   };

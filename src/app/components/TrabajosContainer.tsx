@@ -1,45 +1,46 @@
-import React, { useEffect, useState } from 'react'
-import TrabajosList from './TrabajosList'
-import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../firesebase/config' 
+import React, { useEffect, useState } from 'react';
+import TrabajosList from './TrabajosList';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firesebase/config';
+import { useParams } from 'next/navigation';
 
-interface Trabajo {
+type Trabajo = {
   id: string;
-  // other properties of a trabajo
-}
+  title: string;
+  desc: string;
+  image: string;
+  url: string;
+};
 
 const TrabajosContainer = () => {
+  const [trabajos, setTrabajos] = useState<Trabajo[]>([]);
+  const { categoria } = useParams();
 
-  const [trabajos, setTrabajos] = useState([]);
+  useEffect(() => {
+    const obtenerTrabajos = async () => {
+      const trabajosRef = collection(db, 'trabajos');
+      const querySnapshot = await getDocs(trabajosRef);
+      const trabajosData = querySnapshot.docs.map((doc) => {
+        const data = doc.data();
+        return {
+          id: doc.id,
+          title: data.title,
+          desc: data.desc,
+          image: data.image,
+          url: data.url
+        };
+      });
+      setTrabajos(trabajosData);
+    };
 
-    const traerTrabajos = () => {
-        return new Promise((resolve, reject) => {
-            resolve(data)
-        })
-    }
-
-    useEffect(() => {
-
-      const trabajosRef = collection(db, "trabajos");
-
-      getDocs(trabajosRef)
-        .then((resp) => {          
-          setTrabajos(
-            resp.docs.map((doc) => {
-              return { ...doc.data(), id: doc.id } as Trabajo;
-            })
-          )
-        })
-
-    }, [])
-
-    
+    obtenerTrabajos();
+  }, [categoria]);
 
   return (
     <div>
-      <TrabajosList trabajos={trabajos} />          
+      <TrabajosList trabajos={trabajos} />
     </div>
-  )
-}
+  );
+};
 
-export default TrabajosContainer
+export default TrabajosContainer;
