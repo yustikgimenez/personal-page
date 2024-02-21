@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import './tailwind-global.scss'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 
@@ -8,7 +9,6 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600'],
   subsets: ['latin'],
  })
-
 
 export const metadata: Metadata = {
   title: 'Yustik Gimenez',
