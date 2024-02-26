@@ -12,7 +12,7 @@ const config: Config = {
     extend: {
       container: {
         center: true,
-        padding: '2rem',        
+        padding: '1rem',        
       },       
       maxWidth: {
         'custom': '1420px',

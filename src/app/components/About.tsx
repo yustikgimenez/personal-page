@@ -43,8 +43,8 @@ const About = () => {
                   </Link>
                 </li>
                 <li className='text-md font-semibold'>
-                  <span className='block text-sm font-medium mb-2 text-gray-600'>Linkedin</span>
-                  <Link href='https://www.linkedin.com/in/yustik/' target='_blank' className='hover:text-green-600 underline'>https://www.linkedin.com/in/yustik/</Link>
+                  <span className='block font-medium mb-2 text-gray-600'>Linkedin</span>
+                  <Link href='https://www.linkedin.com/in/yustik/' target='_blank' className='hover:text-green-600 underline text-xs lg:text-sm'>https://www.linkedin.com/in/yustik/</Link>
                 </li>
               </ul>
             </div>

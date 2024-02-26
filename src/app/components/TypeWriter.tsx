@@ -4,7 +4,7 @@ import React from 'react'
 
 const TypeWriter = () => {
   return (
-    <div className='text-center uppercase mb-16 '>
+    <div className='text-center uppercase mb-8 lg:mb-16 '>
       <div className='text-1xl xl:text-2xl mb-2 xl:mb-8 font-light text-white'>Hola, soy Yustik Gimenez</div>
       <div className='text-xs xl:text-3xl leading-10 font-semibold text-green-300'>
       <TypeAnimation
