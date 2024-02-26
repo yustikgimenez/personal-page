@@ -4,6 +4,7 @@ import './globals.css'
 import './tailwind-global.scss'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const poppins = Poppins({ 
   weight: ['300', '400', '500', '600'],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <NavBar />
         {children}
+        <SpeedInsights />
         <Footer />
       </body>
     </html>
