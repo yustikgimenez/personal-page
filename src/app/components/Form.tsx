@@ -59,7 +59,7 @@ const Form = () => {
             )}
         </div>                  
         <form ref={form} onSubmit={sendEmail} className='text-sm'>
-            <label for="name" className='mb-2 block'>Nombre</label>
+            <label htmlFor="name" className='mb-2 block'>Nombre</label>
             <input
                 type="text"
                 name="user_name"
@@ -72,7 +72,7 @@ const Form = () => {
                             required                                        
             />
 
-            <label for="email" className='mb-2 block'>Email</label>
+            <label htmlFor="email" className='mb-2 block'>Email</label>
             <input
                 type="text"
                 name="user_email"
@@ -85,7 +85,7 @@ const Form = () => {
                             required
             />
 
-            <label for="message" className='mb-2 block'>Mensaje</label>
+            <label htmlFor="message" className='mb-2 block'>Mensaje</label>
             <textarea
                 name="message"
                 rows={8}
