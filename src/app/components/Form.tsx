@@ -85,7 +85,7 @@ const Form = () => {
                             required
             />
 
-            <label htmlFor="message" className='mb-2 block'>Mensaje</label>
+            <label htmlFor="user_message" className='mb-2 block'>Mensaje</label>
             <textarea
                 name="message"
                 id="user_message"
