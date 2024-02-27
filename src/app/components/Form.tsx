@@ -88,6 +88,7 @@ const Form = () => {
             <label htmlFor="message" className='mb-2 block'>Mensaje</label>
             <textarea
                 name="message"
+                id="user_message"
                 rows={8}
                 className='block mb-10 w-full
                             bg-transparent border-b 
