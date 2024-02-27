@@ -22,7 +22,7 @@ const BtnTheme = () => {
   };
 
   return (
-    <button className='text-white hover:text-green-300' onClick={handleTheme}>
+    <button aria-label="Cambiar el tema" className='text-white hover:text-green-300' onClick={handleTheme}>
       <BiSolidSun size={32} />
     </button>
   );
