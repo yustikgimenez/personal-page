@@ -60,7 +60,7 @@ const MobileNav = () => {
 
   return (
     <div>
-        <button className='block lg:hidden text-white ml-5' onClick={mobileMenuHandler}>
+        <button aria-label='Menu mobile' className='block lg:hidden text-white ml-5' onClick={mobileMenuHandler}>
             <BiMenu  className='text-3xl' />
         </button>    
 

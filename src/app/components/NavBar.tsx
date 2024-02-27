@@ -24,7 +24,7 @@ const NavBar = () => {
                     className='font-semibold flex items-center
                     text-white hover:text-green-300 
                     text-sm xl:text-lg'>
-                        <BiPhoneCall size={22} className='mr-3' />  112 155 0489
+                        <BiPhoneCall size={22} className='mr-3' />  <span className='hidden md:inline-block'>112 155 0489</span>
                     </Link>
                     <BtnTheme />
                     <MobileNav />

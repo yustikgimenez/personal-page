@@ -7,10 +7,12 @@ import Form from './Form';
 const social = [
     {
         icon: <BiLogoLinkedin />,
+        label: 'Linkedin',
         link: 'https://www.linkedin.com/in/yustik/',
     },
     {
         icon: <BiLogoInstagram />,
+        label: 'Instagram',
         link: 'https://www.instagram.com/soy.yustik/',
     },
 ]
@@ -56,7 +58,7 @@ const Contact = () => {
                     <ul className='flex flex-wrap text-3xl items-center gap-3'>
                         {social.map((social, idxSocial)  => (
                             <li className='bg-gray-800 p-3 rounded-sm text-white hover:bg-white hover:text-black transition-all duration-300 dark:bg-green-400 dark:hover:bg-black dark:hover:text-white' key={idxSocial}>
-                                <Link href={social.link} target='_blank'>
+                                <Link aria-label={social.label} href={social.link} target='_blank'>
                                     {social.icon}
                                 </Link>
                             </li>
