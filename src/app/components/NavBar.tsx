@@ -20,7 +20,7 @@ const NavBar = () => {
                     <ItemNav />
                 </div>  
                 <div className='flex gap-5'>
-                    <Link href='tel:1121550489' 
+                    <Link aria-label='Telefono de contacto' href='tel:1121550489' 
                     className='font-semibold flex items-center
                     text-white hover:text-green-300 
                     text-sm xl:text-lg'>
