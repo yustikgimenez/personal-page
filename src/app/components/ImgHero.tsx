@@ -10,7 +10,7 @@ const ImgHero = () => {
                 width={879 / 3} 
                 height={1122 / 3}
                 quality={100} 
-                className='pointers-events-none select-none object-cover rounded-full overflow-hidden border-8 border-white mx-auto'                         
+                className='pointers-events-none select-none object-cover rounded-full overflow-hidden border-8 border-white mx-auto aspect-auto'                         
                 src='/images/profile.png'
                 alt='Imagen de perfil' 
             />

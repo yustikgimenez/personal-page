@@ -15,6 +15,7 @@ const NavBar = () => {
             <div className="flex justify-between items-center">
                 <div>
                     <Brand />
+                    
                 </div>
                 <div className='hidden lg:block text-right'>
                     <ItemNav />
