@@ -12,7 +12,7 @@ const About = () => {
             <div className='grid xl:grid-cols-3 gap-10 items-center mb-20'>
               <div className='col-span-2'>
                 <div className='text-2xl mb-2 font-semibold text-center xl:text-start'>Hola! soy <span className='bg-secondary inline-block px-3 dark:text-black'>Yustik</span></div>                  
-                <p className='text-lg leading-9 text-center xl:text-start xl:pr-28'>                  
+                <p className='text-lg leading-9 xl:text-start xl:pr-28 text-balance'>                  
                   Soy un diseñador y desarrollador apasionado por el diseño web. 
                   Disfruto desarrollando sitios web simples, limpios y elegantes 
                   que brinden valor real al usuario final. 

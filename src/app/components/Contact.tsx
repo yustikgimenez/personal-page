@@ -40,7 +40,7 @@ const Contact = () => {
                 <div>
                     <HeadSection sectionName='Estemos en contacto' customStyles='text-start mb-16' />
 
-                    <p className='leading-10 mb-36'>
+                    <p className='leading-10 mb-36 text-balance'>
                         Disfruto discutiendo nuevos proyectos y desafíos de diseño. 
                         Comparta tanta información como sea posible para que podamos 
                         aprovechar al máximo nuestra primera conversación.

@@ -46,7 +46,7 @@ const WhatIDo = () => {
                     <div key={idx}>
                         <div style={iconStyle} className='text-green-400'>{item.icon}</div>
                         <div className='font-semibold text-2xl mb-4'>{item.title}</div>
-                        <div className='text-sm leading-6 text-justify'>{item.text}</div>
+                        <div className='text-sm leading-6 text-balance'>{item.text}</div>
                     </div>
                 ))}                
             </div>
